@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 4rem;
+  color: #3e7e87;
+  font-family: "Abril Fatface", serif;
+  font-weight: 300;
+  margin-top: 0.7rem;
+  text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.title > span {
+  color: #785f46;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  width: 1200px;
+}
+
+.cocktail-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  height: 700px;
+  max-width: 1500px;
+  font-family: "Poppins", sans-serif;
+}
+
+.cImg {
+  width: 400px;
+  border-radius: 2rem;
+  padding: 1.2rem;
+}
+
+.cocktail-title {
+  font-size: 3.4rem;
+  text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.6);
+  color: #785f46;
+  font-weight: 700;
+  padding: 1rem;
+  max-width: 800px;
+  text-align: left;
+}
+
+.cocktail-instructions {
+  color: #7fc9d1;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  max-width: 1000px;
+  text-align: left;
+}
+
+.ingredients-title {
+  font-size: 2rem;
+  text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.6);
+  color: #785f46;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: center;
+}
+
+.cocktail-ingredients-list {
+  list-style-type: none;
+  color: #7fc9d1;
+  font-size: 1.3rem;
+  text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.7);
+  column-count: 3;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.cocktail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#randomCocktailBtn {
+    background-color: #785f46;
+    color: #7fc9d1;
+    border-radius: 6px;
+    padding: .6rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    text-align: center;
+    width: 650px;
+    justify-content: center;
+    transition: all .3s;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+#randomCocktailBtn:hover {
+    font-size: 1.5rem;
+}
+
+.back-button {
+  position: absolute;
+  bottom: 13px;
+  right: 20px;
+  font-size: 1.6rem;
+  color: #3e7e87;
+  font-family: "Abril Fatface", serif;
+}
+
+.back-button > a {
+  text-decoration: none;
+  color: #3e7e87;
+  transition: all 0.3s;
+}
+
+.back-button > a > i {
+  color: #785f46;
+  transition: all 0.3s;
+}
+
+.back-button > a:hover > i {
+  transform: translateX(-20%);
+}
+
+.back-button > a:hover {
+  font-size: 1.65rem;
+  color: #4c9ea8;
+  text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+#cocktailForm {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#cocktailForm > input {
+    width: 600px;
+    background-color: transparent;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    color: #b9b9b9;
+    border-bottom: 1px solid #b9b9b9;
+    font-weight: 500;
+}
+
+#cocktailForm > input::placeholder {
+    color: #b9b9b9;
+}
