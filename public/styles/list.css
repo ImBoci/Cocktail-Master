@@ -26,6 +26,8 @@ body {
   font-weight: 300;
   margin-top: 0.7rem;
   text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .title > span {
@@ -57,20 +59,20 @@ main {
 }
 
 .cocktail-list {
-    display: grid;
-    justify-content: space-between;
-    align-content: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    max-height: 600px;
-    width: 1000px;
-    margin: 11rem 0 2rem 1rem;
-    gap: 1rem;
-    padding: 1rem 0 3rem 0;
+  display: grid;
+  justify-content: space-between;
+  align-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  max-height: 600px;
+  width: 1000px;
+  margin: 11rem 0 2rem 1rem;
+  gap: 1rem;
+  padding: 1rem 0 3rem 0;
 }
 
 .list-item {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .cImg {
@@ -177,4 +179,401 @@ main {
 
 #cocktailForm > input::placeholder {
   color: #b9b9b9;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 480px) {
+  body {
+    background-image: url("/img/smallbg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .title {
+    word-wrap: break-word;
+    white-space: wrap;
+    word-break: break-word;
+    font-size: 3rem;
+    width: 300px;
+    margin-top: 2rem;
+    padding: 0;
+    -webkit-animation: none;
+    border-right: none;
+    text-align: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 450px;
+  }
+
+  .cocktail-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    height: 560px;
+    margin: 3rem 2rem 4rem 2rem;
+    overflow-y: scroll;
+  }
+
+  .cocktail-list {
+    display: grid;
+    justify-content: space-between;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    max-height: 600px;
+    width: 1000px;
+    margin: 56rem 0 2rem 1rem;
+    gap: 1rem;
+    padding: 1rem 0 3rem 0;
+  }
+
+  .cImg {
+    width: 160px;
+  }
+
+  .cocktail-title {
+    font-size: 1rem;
+    max-width: 150px;
+    position: relative;
+    top: 0;
+    left: -10px;
+  }
+
+  .cocktail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .back-button {
+    position: fixed;
+    bottom: 13px;
+    right: 20px;
+    font-size: 1.6rem;
+  }
+
+  #cocktailForm {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #cocktailForm > input {
+    width: 350px;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    background-image: url("/img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .title {
+    word-wrap: break-word;
+    white-space: wrap;
+    word-break: break-word;
+    font-size: 4.5rem;
+    max-width: 760px;
+    margin: 5rem 2rem 0 0;
+    padding: 0;
+    -webkit-animation: none;
+    border-right: none;
+    text-align: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 450px;
+  }
+
+  .cocktail-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    height: 560px;
+    margin: 3rem 2rem 4rem 2rem;
+    overflow-y: scroll;
+  }
+
+  .cocktail-list {
+    display: grid;
+    justify-content: space-between;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    max-height: 600px;
+    width: 1000px;
+    margin: 56rem 0 2rem 1rem;
+    gap: 1rem;
+    padding: 1rem 0 3rem 0;
+  }
+
+  .cImg {
+    width: 160px;
+  }
+
+  .cocktail-title {
+    font-size: 1rem;
+    max-width: 150px;
+    position: relative;
+    top: 0;
+    left: -10px;
+  }
+
+  .cocktail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .back-button {
+    position: fixed;
+    bottom: 13px;
+    right: 20px;
+    font-size: 1.6rem;
+  }
+
+  #cocktailForm {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #cocktailForm > input {
+    width: 350px;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    background-image: url("/img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .title {
+    word-wrap: break-word;
+    white-space: wrap;
+    word-break: break-word;
+    font-size: 5.2rem;
+    max-width: 760px;
+    margin: 5rem 2rem 0 0;
+    padding: 0;
+    -webkit-animation: none;
+    border-right: none;
+    text-align: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 450px;
+  }
+
+  .cocktail-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    height: 560px;
+    margin: 3rem 2rem 4rem 2rem;
+    overflow-y: scroll;
+  }
+
+  .cocktail-list {
+    display: grid;
+    justify-content: space-between;
+    align-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-height: 600px;
+    width: 1000px;
+    margin: 36rem 0 2rem 1rem;
+    gap: 1rem;
+    padding: 1rem 0 3rem 0;
+  }
+
+  .cImg {
+    width: 160px;
+  }
+
+  .cocktail-title {
+    font-size: 1rem;
+    max-width: 180px;
+    position: relative;
+    top: 0;
+    left: -25px;
+  }
+
+  .cocktail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .back-button {
+    position: absolute;
+    bottom: 13px;
+    right: 20px;
+    font-size: 1.6rem;
+  }
+
+  #cocktailForm {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #cocktailForm > input {
+    width: 350px;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1201px) {
+  body {
+    background-image: url("/img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .title {
+    word-wrap: break-word;
+    white-space: wrap;
+    word-break: break-word;
+    font-size: 5rem;
+    max-width: 1000px;
+    margin: 5rem 0 0 0;
+    padding: 0;
+    -webkit-animation: none;
+    border-right: none;
+    text-align: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 450px;
+  }
+
+  .cocktail-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    height: 560px;
+    margin: 3rem 2rem 4rem 2rem;
+    overflow-y: scroll;
+  }
+
+  .cocktail-list {
+    display: grid;
+    justify-content: space-between;
+    align-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-height: 600px;
+    width: 1000px;
+    margin: 50rem 0 2rem 1rem;
+    gap: 1rem;
+    padding: 1rem 0 3rem 0;
+  }
+
+  .cImg {
+    width: 230px;
+  }
+
+  .cocktail-title {
+    font-size: 1.3rem;
+    max-width: 280px;
+    position: relative;
+    top: 0;
+    left: -40px;
+  }
+
+  .cocktail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .back-button {
+    position: absolute;
+    bottom: 13px;
+    right: 20px;
+    font-size: 1.6rem;
+  }
+
+  #cocktailForm {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #cocktailForm > input {
+    width: 350px;
+    font-size: 2rem;
+  }
 }
