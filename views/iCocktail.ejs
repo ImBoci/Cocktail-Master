@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cocktails Master</title>
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/list.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -23,24 +23,11 @@
     <div class="container">
       <header class="fejlec">
         <h2 class="title">
-          Everythink you need to know about <span>Cocktails</span>
+          Here is a list of cocktails with <span><%= ingredient %></span>
         </h2>
       </header>
       <main>
-        <div class="cocktail-grid sCocktail">
-          <h3 class="sCockt">Search cocktail by name:</h3>
-          <form id="cocktailForm" action="/cocktail" method="post">
-            <input
-              type="search"
-              name="sInput"
-              placeholder="Search"
-              id="cocktailname"
-              required
-            />
-          </form>
-        </div>
-        <div class="cocktail-grid sIng">
-          <h3 class="sCockt">Search cocktails by ingredient:</h3>
+        <div class="cocktail-wrapper">
           <form id="cocktailForm" action="/ingredient" method="post">
             <input
               type="search"
@@ -50,16 +37,27 @@
               required
             />
           </form>
+          <div class="cocktail-list">
+            <% content.forEach((element) => { %>
+              <a class="list-item" href=<%= "/drink/" + element.idDrink %>>
+                <div class="cocktail-image">
+                  <img class="cImg" src=<%=element.strDrinkThumb %> alt="an
+                  image from a cocktail">
+                </div>
+                <div class="cocktail">
+                  <div class="coctail-info">
+                    <h1 class="cocktail-title"><%= element.strDrink %></h1>
+                  </div>
+                </div>
+              </a>
+            <%}) %> 
+          </div>
         </div>
-        <div class="cocktail-grid rCocktail">
-          <h3 class="randomc">Don't know what to drink? <br> Let me help you</h3>
-          <button
-            type="submit"
-            id="randomCocktailBtn"
-            onclick="window.location.href='/random-cocktail'"
-          >
-            Give me a random cocktail
-          </button>
+        <div class="back-button">
+          <a href="/"
+            ><i class="fa-solid fa-circle-arrow-left"></i>
+            <span>Back to the main page</span>
+          </a>
         </div>
       </main>
     </div>
